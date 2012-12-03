@@ -64,7 +64,8 @@
   // You can access this in jQuery's `$.support.transition`.
   // As per [jQuery's cssHooks documentation](http://api.jquery.com/jQuery.cssHooks/),
   // we set $.support.transition to a string of the actual property name used.
-  support.transition      = getVendorPropertyName('transition');
+  if(!($.support.transition))
+  	support.transition      = getVendorPropertyName('transition'); 
   support.transitionDelay = getVendorPropertyName('transitionDelay');
   support.transform       = getVendorPropertyName('transform');
   support.transformOrigin = getVendorPropertyName('transformOrigin');
